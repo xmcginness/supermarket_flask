@@ -1,0 +1,42 @@
+id;category;name;weight;price;status;stock
+2;Vegetable;Tomato;1kg;2.31;Available;10
+3;Fruit;Apple;1kg;1.99;Available;2
+4;Meat;Beef Steak;400g;9.10;Available;4
+5;Vegetable;Potato;2kg;3.14;Available;10
+6;Meat;Lamb Chops;600g;9.00;Available;10
+7;Meat;Turkey Breast;700g;3.67;Available;10
+8;Fruit;Banana;1kg;4.25;Available;10
+9;Meat;Ground Beef;500g;8.25;Available;9
+10;Vegetable;Onion;1kg;2.35;Available;1
+11;Meat;Chicken Thighs;800g;7.50;Out of stock;0
+12;Meat;Sausages;500g;6.22;Available;9
+13;Vegetable;Carrot;1kg;2.27;Available;9
+14;Fruit;Orange;1kg;5.65;Available;10
+15;Meat;Beef Ribs;kg;8.20;Available;10
+16;Fruit;Grapes;500g;1.78;Available;10
+17;Meat;Pork Chops;700g;8.89;Out of stock;0
+18;Vegetable;Cucumber;500g;3.12;Available;10
+19;Meat;Minced Lamb;500g;2.32;Available;10
+20;Vegetable;Lettuce;1 piece;4.00;Available;10
+21;Fruit;Mango;2 piece;5.35;Available;10
+22;Meat;Chicken Wings;1kg;8.77;Out of stock;0
+23;Vegetable;Bell Pepper;500g;2.66;Available;10
+24;Vegetable;Broccoli;500g;3.39;Available;10
+25;Vegetable;Zucchini;1kg;2.87;Available;10
+26;Meat;Veal Cutlets;600g;10.11;Available;10
+27;Vegetable;Spinach;300g;1.11;Available;10
+28;Fruit;Strawberry;250g;3.78;Out of stock;0
+29;Meat;Beef Mince;1kg;6.00;Available;10
+30;Fruit;Pineapple;2 piece;2.31;Available;10
+31;Meat;Roast Chicken;1.2kg;1.99;Out of stock;0
+32;Vegetable;Eggplant;700g;9.10;Available;10
+33;Fruit;Watermelon;3kg;3.14;Available;10
+34;Meat;Smoked Sausage;400g;9.00;Available;10
+35;Vegetable;Cauliflower;1kg;3.67;Available;10
+36;Meat;Beef Burger Patties;600g;4.25;Available;10
+37;Fruit;Peach ;200g;1.99;Out of stock;0
+38;Meat;Minced Meat ;300g;9.10;Available;9
+39;Fruit;Cocount ;700g;3.14;Out of stock;0
+40;Meat;Carpaccio ;200g;9.00;Out of stock;0
+41;Vegetables;Cherry Tomato;400g;2.33;Available;3
+42;Meat;Chicken fingers;500g;6.99;Available;2

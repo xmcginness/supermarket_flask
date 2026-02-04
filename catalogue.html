@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+  <h1>Products</h1>
+  <p style="color:#6b7280; font-weight:600;">
+    Browse products by category and add items to your cart.
+  </p>
+</div>
+
+{% for cat, items in products_by_category.items() %}
+  <div class="card">
+    <h2>{{ cat }}</h2>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Add</th>
+      </tr>
+
+      {% for p in items %}
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.weight }}</td>
+        <td>€{{ p.price }}</td>
+        <td>{{ p.status }}</td>
+        <td>
+          {% if p.status == "Available" %}
+            <form method="POST" action="{{ url_for('add_to_cart', product_id=p.id) }}">
+                <button class="btn" type="submit">Add</button>
+            </form>
+
+          {% else %}
+            Out of stock
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endfor %}
+
+{% endblock %}

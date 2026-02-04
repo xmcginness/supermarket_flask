@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+  <h1>Manager Dashboard</h1>
+  <p>
+    <a class="btn" href="{{ url_for('manager_add') }}">Add product</a>
+  </p>
+</div>
+
+<div class="card">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="flash-wrap">
+        {% for m in messages %}
+          <div class="flash">{{ m }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <table>
+    <tr>
+      <th>ID</th><th>Category</th><th>Name</th><th>Weight</th>
+      <th>Price</th><th>Status</th><th>Stock</th><th>Actions</th>
+    </tr>
+
+    {% for p in products %}
+      <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.category }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.weight }}</td>
+        <td>€{{ p.price }}</td>
+        <td>{{ p.status }}</td>
+        <td>{{ p.stock }}</td>
+        <td style="white-space:nowrap;">
+          <a class="btn btn-outline" href="{{ url_for('manager_edit', product_id=p.id) }}">Edit</a>
+
+           <form method="POST" action="{{ url_for('manager_delete', product_id=p.id) }}" style="display:inline;">
+            <button class="btn" type="submit">Delete</button>
+          </form>
+        </td>
+
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+
+{% endblock %}

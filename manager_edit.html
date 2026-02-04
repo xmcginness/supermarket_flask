@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+  <h1>Edit Product</h1>
+  <p><b>{{ product.name }}</b> (ID {{ product.id }})</p>
+
+  <form method="POST">
+    <label>Price (€)</label><br>
+    <input name="price" value="{{ product.price }}" required><br><br>
+
+    <label>Stock</label><br>
+    <input name="stock" value="{{ product.stock }}" required><br><br>
+
+    <button class="btn" type="submit">Save</button>
+    <a class="btn btn-outline" href="{{ url_for('manager') }}">Cancel</a>
+  </form>
+</div>
+
+{% endblock %}

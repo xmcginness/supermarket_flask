@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card hero">
+  <div>
+    <h1>Welcome to our Supermarket</h1>
+    <p style="color:#6b7280; font-weight:600;">
+      Browse products by category and order easily online.
+    </p>
+
+    {% if not session.get("user") %}
+      <p>
+        <a class="btn" href="{{ url_for('login') }}">Login</a>
+        <a class="btn btn-outline" href="{{ url_for('signup') }}">Signup</a>
+      </p>
+    {% else %}
+      {% if session.get("role") == "customer" %}
+        <p>
+          <a class="btn" href="{{ url_for('catalogue') }}">Go to Products</a>
+        </p>
+      {% elif session.get("role") == "manager" %}
+        <p>
+          <a class="btn" href="{{ url_for('manager') }}">Go to Manager Dashboard</a>
+        </p>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <img src="{{ url_for('static', filename='hero.jpg') }}" alt="Supermarket">
+</div>
+
+{% endblock %}
